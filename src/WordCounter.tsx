@@ -1,10 +1,15 @@
 /*global chrome*/
 import { useEffect, useState } from "react";
 import { getCurrentTab } from "./utils";
+import useChromeStorageState from "./hooks";
 
 export const WordCounter = () => {
   let tabId = 0;
-  const [wordCounts, setWordCounts] = useState<Array<number>>([5]);
+  let tabUrl = "";
+  const [wordCounts, setWordCounts] = useChromeStorageState<Array<number>>(
+    tabUrl,
+    []
+  );
 
   // Fetch current word count from doc
   const getCurrentWordCount = (): number | null => {

@@ -3,7 +3,7 @@
   "name": "Google Docs Word Counter",
   "description": "Word counter over time",
   "version": "1.0",
-  "permissions": ["scripting", "sidePanel", "tabs"],
+  "permissions": ["scripting", "sidePanel", "tabs", "storage"],
   "host_permissions": ["https://docs.google.com/document/*"],
   "icons": {
     "16": "images/icon-16.png",

@@ -6,3 +6,4 @@ Todo:
 
 - doesn't currently show/hide sidebar when navigating forward/backward
 - doesn't show when word count equals 0
+- needs to differentiate storage between different docs

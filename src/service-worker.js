@@ -6,18 +6,15 @@ chrome.sidePanel
   .catch((error) => console.error(error));
 
 const tabChangeCallback = async (tab) => {
-  console.log(tab);
   if (!tab.url) return;
   // Enables the side panel on google.com
   if (tab.url.startsWith(GOOGLE_DOCS_ORIGIN)) {
-    console.log("DOCS");
     await chrome.sidePanel.setOptions({
       tabId: tab.id,
       path: "js/index.html",
       enabled: true,
     });
   } else {
-    console.log("NOT DOCS");
     // Disables the side panel on all other sites
     await chrome.sidePanel.setOptions({
       tabId: tab.id,
